@@ -11,5 +11,5 @@ export async function jsonHandler(request, response){
         console.log(error)
         request.body = null
     }
-    response.setHeader("Concent-Type", "application/json")
+    response.setHeader("Content-Type", "application/json")
 }
