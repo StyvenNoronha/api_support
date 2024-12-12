@@ -2,6 +2,7 @@ import { create } from "../controllers/tickets/create.js";
 import { index } from "../controllers/tickets/index.js";
 import { update } from "../controllers/tickets/update.js";
 import { updateStatus } from "../controllers/tickets/updateStatus.js";
+import { deleteItem } from "../controllers/tickets/deleteItem.js";
 export const tickets = [
   {
     method: "POST",
@@ -22,6 +23,11 @@ export const tickets = [
     method: "PATCH",
     path: "/tickets/:id/close",
     controller: updateStatus
+  },
+  {
+    method: "DELETE",
+    path: "/tickets/:id",
+    controller: deleteItem
   },
 
 ];
